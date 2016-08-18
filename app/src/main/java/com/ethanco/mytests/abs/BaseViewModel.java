@@ -4,7 +4,7 @@ import android.support.annotation.CallSuper;
 import android.support.annotation.NonNull;
 import android.util.Log;
 
-import com.ethanco.zanno.ZAnnoInjector;
+import com.lib.frame.injector.ZAnnoInjector;
 
 import java.lang.ref.Reference;
 import java.lang.ref.WeakReference;

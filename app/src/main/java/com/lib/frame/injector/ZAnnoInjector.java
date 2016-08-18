@@ -1,10 +1,11 @@
-package com.ethanco.zanno;
+package com.lib.frame.injector;
+
+import com.ethanco.zanno.Finder;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
- * @Description TODO
  * Created by YOLANDA on 2016-01-21.
  */
 public class ZAnnoInjector {
@@ -16,7 +17,7 @@ public class ZAnnoInjector {
         if (injector == null) {
             System.out.println("injector == null");
         } else {
-            injector.inject(Finder.SUBSCRIPTION, obj, obj);
+            injector.inject(obj, obj);
         }
     }
 
@@ -25,7 +26,7 @@ public class ZAnnoInjector {
         AbstractInjector<Object> injector = INJECTORS.get(clazz);
         if (injector == null) {
             try {
-                Class injectorClazz = Class.forName(clazz.getName() + "$$" + ProxyInfo.PROXY_SUFFIX);
+                Class injectorClazz = Class.forName(clazz.getName() + "$$" + "ZANNOPROXY");
                 injector = (AbstractInjector<Object>) injectorClazz.newInstance();
                 INJECTORS.put(clazz, injector);
             } catch (ClassNotFoundException e) {

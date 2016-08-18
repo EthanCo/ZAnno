@@ -38,7 +38,7 @@ public class ProxyInfo {
         builder.append("package ").append(packageName).append(";\n\n");
 
         builder.append("import com.ethanco.zanno.Finder;\n");
-        builder.append("import com.ethanco.zanno.AbstractInjector;\n");
+        builder.append("import com.lib.frame.injector.AbstractInjector;\n");
         builder.append("import android.os.Build;\n");
         builder.append("import android.os.Bundle;\n");
 
@@ -62,10 +62,10 @@ public class ProxyInfo {
     }
 
     private void generateInjectMethod(StringBuilder builder) {
-        builder.append("  @Override ").append("public void inject(final Finder finder, final T target, Object source) {\n");
-        builder.append("if(finder.equals(Finder.SUBSCRIPTION)){").append("");
+        builder.append("  @Override ").append("public void inject(final T target, Object source) {\n");
+        //builder.append("if(finder.equals(Finder.SUBSCRIPTION)){").append("");
         builder = generateActivityFinderCode(builder);
-        builder.append("}");
+        //builder.append("}");
         builder.append("  }\n");
     }
 

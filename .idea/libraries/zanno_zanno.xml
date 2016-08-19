@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="zanno.zanno">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/zanno/build/libs/zanno.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

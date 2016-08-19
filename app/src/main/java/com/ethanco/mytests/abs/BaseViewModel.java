@@ -34,7 +34,7 @@ public abstract class BaseViewModel<T> {
 
     @CallSuper
     public void detachView() {
-        Log.i(TAG, "detachView : ");
+        Log.i(TAG, "detachView1 : ");
         ZAnnoInjector.inject(this);
 
         if (mViewRef != null) {

@@ -2,7 +2,22 @@
 为了使编程更简单，开发的一个注解框架
 
 ## 使用 ##
-将ehtanco-zanno.jar添加到你的项目中即可
+在根build.gradle中添加  
+
+	allprojects {
+		repositories {
+			...
+			maven { url "https://jitpack.io" }
+		}
+	}  
+
+在你的build.gradle (Module:app) 中添加  
+
+	dependencies {
+	        compile 'com.github.EthanCo:ZAnno:1.0.2'
+	}
+
+即可
 
 ## 注解说明 ##
 

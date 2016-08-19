@@ -2,7 +2,7 @@
 为了使编程更简单，开发的一个注解框架
 
 ## 使用 ##
-在根build.gradle中添加  
+在你的build.gradle(Project)中添加  
 
 	allprojects {
 		repositories {

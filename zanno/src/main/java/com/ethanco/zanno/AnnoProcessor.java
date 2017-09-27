@@ -1,5 +1,7 @@
 package com.ethanco.zanno;
 
+import com.google.auto.service.AutoService;
+
 import java.io.IOException;
 import java.io.Writer;
 import java.util.HashMap;
@@ -8,8 +10,10 @@ import java.util.Set;
 
 import javax.annotation.processing.AbstractProcessor;
 import javax.annotation.processing.ProcessingEnvironment;
+import javax.annotation.processing.Processor;
 import javax.annotation.processing.RoundEnvironment;
 import javax.annotation.processing.SupportedAnnotationTypes;
+import javax.annotation.processing.SupportedSourceVersion;
 import javax.lang.model.SourceVersion;
 import javax.lang.model.element.Element;
 import javax.lang.model.element.ElementKind;
@@ -23,8 +27,9 @@ import javax.tools.JavaFileObject;
 /**
  * Created by YOLANDA on 2016-01-21.
  */
+@AutoService(Processor.class)
 @SupportedAnnotationTypes({"com.ethanco.zanno.AutoDestory"})
-//@SupportedSourceVersion(SourceVersion.RELEASE_7)
+@SupportedSourceVersion(SourceVersion.RELEASE_7)
 public class AnnoProcessor extends AbstractProcessor {
 
     private Elements elementUtils;
@@ -93,8 +98,8 @@ public class AnnoProcessor extends AbstractProcessor {
         return true;
     }
 
-    @Override
+    /*@Override
     public SourceVersion getSupportedSourceVersion() {
         return SourceVersion.latestSupported();
-    }
+    }*/
 }

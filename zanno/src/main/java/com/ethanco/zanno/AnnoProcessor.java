@@ -93,4 +93,9 @@ public class AnnoProcessor extends AbstractProcessor {
 
         return true;
     }
+
+    @Override
+    public SourceVersion getSupportedSourceVersion() {
+        return SourceVersion.latestSupported();
+    }
 }
